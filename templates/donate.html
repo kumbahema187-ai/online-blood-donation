@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="card card-custom p-4">
+  <h4>Register as Donor</h4>
+  <form method="POST" class="row g-3 mt-2">
+    <div class="col-md-6"><label class="form-label">Full Name</label><input name="name" class="form-control" required></div>
+    <div class="col-md-3"><label class="form-label">Blood Group</label><input name="blood_group" class="form-control" placeholder="A+ / O-" required></div>
+    <div class="col-md-3"><label class="form-label">Phone</label><input name="phone" class="form-control"></div>
+    <div class="col-md-6"><label class="form-label">Location / City</label><input name="location" class="form-control"></div>
+    <div class="col-md-6"><label class="form-label">Last Donation Date</label><input type="date" name="last_donation" class="form-control"></div>
+    <div class="col-12"><button class="btn btn-danger-custom">Submit</button> <a class="btn btn-secondary" href="{{ url_for('index') }}">Cancel</a></div>
+  </form>
+</div>
+{% endblock %}

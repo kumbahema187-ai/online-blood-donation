@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="card card-custom p-4">
+  <h4>Availability {% if group %}for {{ group }}{% endif %}</h4>
+  {% if donors %}
+    <table class="table">
+      <thead><tr><th>Name</th><th>Group</th><th>Phone</th><th>Location</th><th>Last Donation</th></tr></thead>
+      <tbody>
+        {% for d in donors %}
+          <tr><td><a href="{{ url_for('donor_detail', donor_id=d['id']) }}">{{ d['name'] }}</a></td><td>{{ d['blood_group'] }}</td><td>{{ d['phone'] or '-' }}</td><td>{{ d['location'] or '-' }}</td><td>{{ d['last_donation'] or '-' }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No donors found for this group.</p>
+  {% endif %}
+</div>
+{% endblock %}

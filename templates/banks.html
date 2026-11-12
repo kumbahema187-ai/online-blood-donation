@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="card card-custom p-4">
+  <h4>Blood Banks</h4>
+  <table class="table">
+    <thead><tr><th>Name</th><th>Location</th><th>Groups</th><th>Contact</th></tr></thead>
+    <tbody>
+      {% for b in banks %}
+        <tr><td>{{ b['name'] }}</td><td>{{ b['location'] }}</td><td>{{ b['available_groups'] }}</td><td>{{ b['contact'] or '-' }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

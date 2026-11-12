@@ -1,0 +1,10 @@
+
+/* custom project css - subtle and clean */
+body { background: #fff7f7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+.header-banner { background: linear-gradient(90deg,#b71c1c,#e53935); color: white; padding: 30px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.brand-title { font-weight:700; letter-spacing:1px; font-size:1.5rem; }
+.card-custom { border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.btn-danger-custom { background: linear-gradient(90deg,#e53935,#d32f2f); border: none; color: white; }
+.small-muted { color: #6c6c6c; font-size:0.9rem; }
+.table-striped>tbody>tr:nth-of-type(odd){ background: #fff7f7; }
+.footer-small { font-size:0.85rem; color:#555; padding:20px 0; text-align:center; }

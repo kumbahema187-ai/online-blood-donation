@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="card card-custom p-4">
+  <h4>Donor Details</h4>
+  <table class="table">
+    <tr><th>Name</th><td>{{ donor['name'] }}</td></tr>
+    <tr><th>Blood Group</th><td>{{ donor['blood_group'] }}</td></tr>
+    <tr><th>Phone</th><td>{{ donor['phone'] or '-' }}</td></tr>
+    <tr><th>Location</th><td>{{ donor['location'] or '-' }}</td></tr>
+    <tr><th>Last Donation</th><td>{{ donor['last_donation'] or '-' }}</td></tr>
+  </table>
+  <a class="btn btn-secondary" href="{{ url_for('index') }}">Back</a>
+</div>
+{% endblock %}
